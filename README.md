@@ -10,7 +10,7 @@ At the moment, the program should support the following set of commands.
 
 ## The Output should be something like this
 
-![img_1.png](output_file.png)
+![img.png](output_file.png)
 
 ## Getting Started
 
@@ -65,7 +65,7 @@ Example:
 
 ## Built With
 
-* [Dropwizard](https://www.python.org/) - The Language used
+* [Python](https://www.python.org/) - The Language used
 
 ## Authors
 
