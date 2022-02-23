@@ -1,9 +1,10 @@
-from . import GeometryObject
-from line import Line
+from .GeometryObject import GeometryObject
+from .line import Line
 
 
 class Rectangle(GeometryObject):
     """Creates a rectangle object"""
+
     def __init__(self, x1, y1, x2, y2, pen_style='x'):
         GeometryObject.__init__(self, 'R', pen_style)
         self.x1, self.x2, self.y1, self.y2 = x1, x2, y1, y2
@@ -24,6 +25,7 @@ class Rectangle(GeometryObject):
         """Check geometry constraints. The object should be
         smaller than Canvas"""
         if self.x1 > self.x2 or self.y1 > self.y2:
+            print('Wrong values for X or Y. Please verify.')
             return False
 
         if min(self.x1, self.x2) < min(self.canvas.x1, self.canvas.x2):
@@ -34,7 +36,7 @@ class Rectangle(GeometryObject):
             print('X value is larger than width canvas')
             return False
 
-        if min(self.y1, self.y2) > max(self.canvas.y1, self.canvas.y2):
+        if min(self.y1, self.y2) < min(self.canvas.y1, self.canvas.y2):
             print('Y value is smaller than height canvas')
             return False
 

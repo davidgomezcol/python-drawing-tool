@@ -1,6 +1,7 @@
-class Canvas:
-    """Class to create canvas with Width and Height
+class Canvas(object):
+    """Create canvas with width and height
     which borders are horizontal '-' and vertical '|' """
+
     _instance = None
 
     def __new__(cls, *args, **kwargs):

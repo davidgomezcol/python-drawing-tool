@@ -7,16 +7,16 @@ def validate_input_command(input_val):
         for i in input_val[1:-1]:
             try:
                 val.append(int(i))
-            except AssertionError:
-                print('Parameter must be numeric')
+            except ValueError:
+                print('Parameters must be numeric')
                 return []
         val.append(input_val[-1])
     else:
         for i in input_val[1:]:
             try:
                 val.append(int(i))
-            except AssertionError:
-                print('Parameter must be numeric')
+            except ValueError:
+                print('Parameters must be numeric')
                 return []
     return val
 
@@ -33,10 +33,10 @@ def validate_command_string(input_str):
     return True
 
 
-def validate_input_values(input_val):
+def validate_input_args(input_args):
     """Validates number of input values depending
         of the command type"""
-    c_type = input_val[0].upper()
+    c_type = input_args[0].upper()
 
     if c_type == 'Q':
         num_args = 0
@@ -52,8 +52,8 @@ def validate_input_values(input_val):
         print('Wrong geometry type was given. Please verify.')
         return False
 
-    if len(input_val[1:]) != num_args:
-        print('Wrong number of arguments for {} command').format(c_type)
+    if len(input_args[1:]) != num_args:
+        print('Wrong number of arguments for {} command'.format(c_type))
         return False
 
     return True

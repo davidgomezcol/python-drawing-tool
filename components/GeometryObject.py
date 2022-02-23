@@ -1,12 +1,13 @@
 from abc import ABC, abstractmethod
-from . import canvas
+from .canvas import Canvas
 
 
 class GeometryObject(ABC):
     """Creates a geometry object with pen style
     and geometry type"""
+
     def __init__(self, geometry_type, pen_style):
-        self.canvas = canvas.getInstance()
+        self.canvas = Canvas.get_instance()
         self.geometry_type = geometry_type
         self.pen_style = pen_style
 
