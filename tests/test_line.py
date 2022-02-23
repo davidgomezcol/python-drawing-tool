@@ -46,12 +46,12 @@ class TestLine(unittest.TestCase):
         line5 = Line(x15, y15, x25, y25)
         line6 = Line(x16, y16, x26, y26)
 
-        self.assertEqual(True, line1.check_geometry_object_constraints())
-        self.assertEqual(False, line2.check_geometry_object_constraints())
-        self.assertEqual(False, line3.check_geometry_object_constraints())
-        self.assertEqual(False, line4.check_geometry_object_constraints())
-        self.assertEqual(False, line5.check_geometry_object_constraints())
-        self.assertEqual(False, line6.check_geometry_object_constraints())
+        self.assertTrue(line1.check_geometry_object_constraints())
+        self.assertFalse(line2.check_geometry_object_constraints())
+        self.assertFalse(line3.check_geometry_object_constraints())
+        self.assertFalse(line4.check_geometry_object_constraints())
+        self.assertFalse(line5.check_geometry_object_constraints())
+        self.assertFalse(line6.check_geometry_object_constraints())
 
 
 if __name__ == '__main__':

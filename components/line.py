@@ -43,3 +43,6 @@ class Line(GeometryObject):
             return False
 
         return True
+
+    def __repr__(self):
+        return "Line"

@@ -42,12 +42,12 @@ class TestRectangle(unittest.TestCase):
         rectangle5 = Rectangle(x15, y15, x25, y25)
         rectangle6 = Rectangle(x16, y16, x26, y26)
 
-        self.assertEqual(True, rectangle1.check_geometry_object_constraints())
-        self.assertEqual(False, rectangle2.check_geometry_object_constraints())
-        self.assertEqual(False, rectangle3.check_geometry_object_constraints())
-        self.assertEqual(False, rectangle4.check_geometry_object_constraints())
-        self.assertEqual(False, rectangle5.check_geometry_object_constraints())
-        self.assertEqual(False, rectangle6.check_geometry_object_constraints())
+        self.assertTrue(rectangle1.check_geometry_object_constraints())
+        self.assertFalse(rectangle2.check_geometry_object_constraints())
+        self.assertFalse(rectangle3.check_geometry_object_constraints())
+        self.assertFalse(rectangle4.check_geometry_object_constraints())
+        self.assertFalse(rectangle5.check_geometry_object_constraints())
+        self.assertFalse(rectangle6.check_geometry_object_constraints())
 
 
 if __name__ == '__main__':

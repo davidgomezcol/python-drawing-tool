@@ -1,3 +1,20 @@
+def validate_file_name(input_str):
+    """Validates that the filename is correct"""
+
+    ext = input_str.split('.')
+    if '.' in input_str and len(ext[-1]) == 3 and len(input_str) >= 5:
+        return True
+    elif '.' in input_str and len(ext[-1]) >= 3:
+        print('Enter filename in correct format. ie. "input.txt"')
+        return False
+    elif '.' in input_str and len(ext[-1]) < 3:
+        print('Wrong extension "{}". ie "input.txt"'.format(ext[-1]))
+        return False
+    elif '.' not in input_str or input_str == "":
+        print('File name or extension missing. ie. "input.txt"')
+        return False
+
+
 def validate_input_command(input_val):
     """Validates that the Command line includes
     numbers"""
@@ -49,7 +66,8 @@ def validate_input_args(input_args):
     elif c_type == 'B':
         num_args = 3
     else:
-        print('Wrong geometry type was given. Please verify.')
+        print('Wrong geometry type "{}" was given. '
+              'Please verify.'.format(c_type))
         return False
 
     if len(input_args[1:]) != num_args:
