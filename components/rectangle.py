@@ -29,19 +29,19 @@ class Rectangle(GeometryObject):
             return False
 
         if min(self.x1, self.x2) < min(self.canvas.x1, self.canvas.x2):
-            print('X value is smaller than width canvas')
+            print('X value is smaller than canvas')
             return False
 
         if max(self.x1, self.x2) > max(self.canvas.x1, self.canvas.x2):
-            print('X value is larger than width canvas')
+            print('X value is larger than canvas')
             return False
 
         if min(self.y1, self.y2) < min(self.canvas.y1, self.canvas.y2):
-            print('Y value is smaller than height canvas')
+            print('Y value is smaller than canvas')
             return False
 
         if max(self.y1, self.y2) > max(self.canvas.y1, self.canvas.y2):
-            print('Y value is larger than height canvas')
+            print('Y value is larger than canvas')
             return False
 
         return True

@@ -19,7 +19,7 @@ for development and testing purposes.
 
 ### Prerequisites
 
-To run this project you need to install Python3.5 or higher. You don't need extra packages. 
+To run this project you need to install Python v3.5 or higher. You don't need extra packages. 
 However, to run the tests you should install flake8.
 
 Manually:
@@ -30,7 +30,7 @@ pip install flake8
 
 From Requirements File:
 ```
-pip install -f requirements.txt
+pip install -r requirements.txt
 ```
 
 That's it!.
@@ -73,4 +73,4 @@ Example:
 
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details

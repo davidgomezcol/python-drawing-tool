@@ -26,22 +26,21 @@ class Bucket(GeometryObject):
             bucket_4.draw_to_canvas()
 
     def check_geometry_object_constraints(self):
-        """Check geometry constraints. The object should be
-        smaller than Canvas"""
+        """Check geometry constraints of the object"""
         if self.x < min(self.canvas.x1, self.canvas.x2):
-            print('X value is smaller than canvas width')
+            print('X value is smaller than canvas')
             return False
 
         if self.x > max(self.canvas.x1, self.canvas.x2):
-            print('X value is larger than canvas width')
+            print('X value is larger than canvas')
             return False
 
         if self.y < min(self.canvas.y1, self.canvas.y2):
-            print('Y Value is smaller than canvas height')
+            print('Y Value is smaller than canvas')
             return False
 
         if self.y > max(self.canvas.y1, self.canvas.y2):
-            print('Y Value is larger than canvas height')
+            print('Y Value is larger than canvas')
             return False
 
         return True
