@@ -63,6 +63,18 @@ Example:
         self.assertEqual(exp, self.canvas.canvasArray)
 ```
 
+### Run the program
+
+To run the program you just go to the root folder and run the following command:
+
+```
+python app.py
+```
+
+The input.txt file should be placed in the "files" folder located in the root folder.
+
+The output.txt file is going to be created on the "files" folder.
+
 ## Built With
 
 * [Python](https://www.python.org/) - The Language used
